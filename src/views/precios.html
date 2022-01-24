@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/precios.css">
+    <title>Actualizacion de Precios</title>
+</head>
+<body>
+    
+        <div class="rs_form">
+            <form method="POST" action="/price" class="firstForm">
+
+                <div>
+                    <h3>Actualizar RuneScape OLD</h3>
+
+                    <label for="valorMDolar">Dolar</label>
+                    <input type="number" step="0.01" name="valorMDolarOLD" id="valorMDolar">
+
+                    <label for="valorMBs">Bolivares</label>
+                    <input type="number" step="0.01" name="valorMBsOLD" id="valorMBs">
+
+                    <label for="valorMArg">Peso Argentino</label>
+                    <input type="number" step="0.01"  name="valorMArgOLD"  id="valorMArg">
+
+                    <label for="valorMCol">Peso Colombiano</label>
+                    <input type="number" step="0.01"  name="valorMColOLD" id="valorMCol">
+
+                    <label for="valorMSol">Soles</label>
+                    <input type="number" step="0.01"  name="valorMSolOLD" id="valorMSol">
+
+                    <label for="valorMBzl">Brasil</label>
+                    <input type="number" step="0.01"  name="valorMBzlOLD" id="valorMBzl">
+                </div>
+
+                
+                <div>
+                    <h3>Actualizar RuneScape 3</h3>
+                
+                    <label for="valorMDolar">Dolar</label>
+                    <input type="number" step="0.01" name="valorMDolar3"  id="valorMDolar">
+
+                    <label for="valorMBs">Bolivares</label>
+                    <input type="number" step="0.01" name="valorMBs3" id="valorMBs">
+
+                    <label for="valorMArg">Peso Argentino</label>
+                    <input type="number" step="0.01" name="valorMArg3" id="valorMArg">
+
+                    <label for="valorMCol">Peso Colombiano</label>
+                    <input type="number" step="0.01" name="valorMCol3" id="valorMCol">
+
+                    <label for="valorMSol">Soles</label>
+                    <input type="number" step="0.01" name="valorMSol3" id="valorMSol">
+
+                    <label for="valorMBzl">Brasil</label>
+                    <input type="number" step="0.01" name="valorMBzl3" id="valorMBzl">
+                </div>
+
+               <button id="submitRs3" type='submit' class="botonSubmit">Actualizar</button>
+
+            </form>
+            <div class="secondForm">
+                
+                <form action="/actualizarSengunDolar" method="POST" class="secondForm">
+                    <label for="actualizacionDolar"  >Valor del Dolar RSOLD</label>
+                    <input type="number" name="dolaresRSOLD" step="0.01" required>
+
+                    <label for="actualizacionDolar"  >Valor del Dolar RS3</label>
+                    <input type="number" name="dolaresRS3" step="0.01" required>
+
+                    <input type="submit" value="Actualizar" class="botonSubmit">
+
+                </form>
+                <form action="/actualizarMonedas" method="POST" class="secondForm">
+                    <label for="actualizacionDolar">Valos del Dolar en Bs></label>
+                    <input type="number"  step="0.01" name="Bs" required>
+
+                    <label for="actualizacionDolar" >Valos del Dolar en COL</label>
+                    <input type="number" step="0.01" name="COL" required>
+
+                    <label for="actualizacionDolar" >Valos del Dolar en ARB</label>
+                    <input type="number" step="0.01" name="ARG" required>
+
+                    <label for="actualizacionDolar" >Valos del Dolar en SOL</label>
+                    <input type="number" step="0.01" name="SOL" required>
+
+                    <label for="actualizacionDolar" >Valos del Dolar en BRL</label>
+                    <input type="number" step="0.01" name="BRL" required>
+
+                    <input type="submit" value="Actualizar" class="botonSubmit">
+
+                </form>
+            </div>
+            <div class="container2">
+                <div class="cuadroPrecio">
+                    <h3>Dolar</h3>
+                    <p>RuneScape Old <span><%= preciosActuales[0].valorMDolar %></span> </p>
+                    <p>RuneScape3 <span><%= preciosActuales[1].valorMDolar %></span> </p>
+                </div>
+                <div class="cuadroPrecio">
+                   <h3>Bolivares</h3> 
+                   <p>RuneScape Old <span><%= preciosActuales[0].valorMBs %></span> </p>
+                    <p>RuneScape3 <span><%= preciosActuales[1].valorMBs %></span> </p>
+                </div>
+                <div class="cuadroPrecio">
+                    <h3>Peso Argentino</h3>
+                    <p>RuneScape Old <span><%= preciosActuales[0].valorMArg %></span> </p>
+                    <p>RuneScape3 <span><%= preciosActuales[1].valorMArg %></span> </p>
+                </div>
+                <div class="cuadroPrecio">
+                   <h3>Peso Colombiano</h3>
+                   <p>RuneScape Old <span><%= preciosActuales[0].valorMCol %></span> </p>
+                    <p>RuneScape3 <span><%= preciosActuales[1].valorMCol %></span> </p>  
+                </div>
+                <div class="cuadroPrecio">
+                   <h3>Soles</h3> 
+                   <p>RuneScape Old <span><%= preciosActuales[0].valorMSol %></span> </p>
+                    <p>RuneScape3 <span><%= preciosActuales[1].valorMSol %></span> </p>
+                </div>
+                <div class="cuadroPrecio">
+                   <h3>Brasil</h3> 
+                   <p>RuneScape Old <span><%= preciosActuales[0].valorMBzl %></span> </p>
+                    <p>RuneScape 3 <span><%= preciosActuales[1].valorMBzl %></span> </p>
+                </div>
+            </div>
+        </div>
+ 
+    
+
+       <!--Mostrar precios actuales -->
+    
+    
+</body>
+</html>

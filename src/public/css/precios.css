@@ -1,0 +1,157 @@
+
+html{
+    width: 100%;
+}
+body{
+    background-color: #2193b0;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/************************************Formularios************************************/
+
+
+.rs_form{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.secondForm{
+    width: 12em;
+    display: flex;
+    
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
+   
+}
+
+.firstForm{
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
+
+}
+
+
+
+.rs_form h1{
+    text-align: center;
+    
+}
+.firstForm div{
+    display: flex;
+    flex-direction: column;
+    
+    
+    align-items: center;
+
+}
+
+
+.firstForm div input[type="number"],.secondForm input[type="number"]{
+    background: white;
+    outline: none;
+    height: 1em;
+    border: none;
+    border-radius: 5px;
+    border-bottom:2px solid white ;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.botonSubmit {
+    padding: 0.9em 1em;
+    border: 2px solid #1776c3;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    width: 90%;
+   }
+   
+.botonSubmit::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    background: #ffffff;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+.botonSubmit:hover::before {
+    width: 105%;
+   }
+   
+.botonSubmit:hover {
+    color: rgb(17, 17, 17);
+}
+
+   /******************************* Mostrando precios**********************/
+
+.container2{
+    
+
+}
+
+.cuadroPrecio{
+     margin-bottom: 2rem;
+    padding: 1em;
+   
+    border-radius: 38px;
+    background: #2193b0;
+    box-shadow:  11px 11px 22px #135768,
+             -11px -11px 22px #2fcff8;
+    
+}
+.cuadroPrecio h3{
+    color: yellow;
+}
+.cuadroPrecio span{
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+   /******************************* media query**********************/
+   @media only screen and (min-width: 320px) {
+   
+  }
+  /* TABLET VERSION */
+  @media only screen and (max-width: 768px) {
+    
+   
+  }
+ 
